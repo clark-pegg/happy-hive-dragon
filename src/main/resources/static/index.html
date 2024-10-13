@@ -23,9 +23,10 @@
       .then(response => response.json())
 
       .then(data => {
+        element = document.getElementById("balance");
 
-        document.getElementById("balance").innerHTML = "Account Balance: " + data.balance + " " + data.currency;
-
+        data["accounts"].forEach(account =>
+          element.innerHTML = element.innerHTML + account.accountName + " " + account.accountId + ": " + account.balance + " " + account.currency + "<br>")
       });
 
   </script>
