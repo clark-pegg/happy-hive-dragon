@@ -13,3 +13,4 @@ public class FinancialDashboardApplication {
        SpringApplication.run(FinancialDashboardApplication.class, args);
 
    }
+}
