@@ -1,36 +1,59 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-
-  <title>Financial Dashboard</title>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DASHBOARD</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
-
 <body>
+    <div class="container mt-4">
+        <div class="card text-left">
+            <div class="card-header">
+                <h1>DASHBOARD</h1>
+                <div class="p">Welcome Back, UserName</div>
+            </div>
+            <div class="p">ACCOUNT BALANCES</div>
+           
+            <div class="card-body">
+                <strong>
+                    <div id="balance"></div>
+                </strong>
+            </div>
+        </div>
+    </div>
 
-  <h1>Financial Dashboard</h1>
-
-  <div id="balance"></div>
-
-  <script>
-
-    // Fetch data from the backend
-
-    fetch("/balances")
-
-      .then(response => response.json())
-
-      .then(data => {
-        element = document.getElementById("balance");
-
-        data["accounts"].forEach(account =>
-          element.innerHTML = element.innerHTML + account.accountName + " " + account.accountId + ": " + account.balance + " " + account.currency + "<br>")
-      });
-
-  </script>
-
-</body>
-
+    <script>
+        // Fetch data from the backend
+        fetch("/balances")
+            .then(response => response.json())
+            .then(data => {
+                const element = document.getElementById("balance");
+                element.innerHTML = ''; // Clear previous content
+    
+                // Create a container for the row
+                const rowDiv = document.createElement("div");
+                rowDiv.className = "balances-row"; // Add class for styling
+    
+                // Iterate through account data
+                data["accounts"].forEach(account => {
+                    // Create a column for each account
+                    const colDiv = document.createElement("div");
+                    colDiv.className = "account-info"; // Add class for column styling
+    
+                    // Add account details to the column
+                    colDiv.innerHTML = `
+                        <strong>$ ${account.balance} ${account.currency}</strong>
+                        <div class="p">${account.accountName}</p>
+                    `;
+    
+                    // Append the column to the row container
+                    rowDiv.appendChild(colDiv);
+                });
+    
+                // Append the row container to the balance element
+                element.appendChild(rowDiv);
+            });
+    </script>
+     </body>
 </html>

@@ -1,0 +1,99 @@
+body {
+    background-color: #f4f6f9;
+    font-family: Arial, sans-serif;
+    color: #333;
+    font-size: 1.0rem;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2.0rem;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+
+/* Card styling */
+.card {
+    border: 1px solid #e3e3e3;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    text-align: center; /* Center text within the card */
+}
+
+.card-header {
+    background-color: #f2f2fc;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    font-size: 1.0rem;
+    border-bottom: none;
+    border-radius: 5px 5px 0 0;
+    font-weight: bold; /* Bold header */
+    text-align: left;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.account-header {
+    text-align: center;
+    font-size: 1.rem;
+    margin-bottom: 20px;
+    color: #000000ef;
+}
+
+.balances-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap
+}
+
+.account-info {
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    background-color: #f8f9fa;
+    padding: 15px;
+    width: 100%;
+    text-align: left;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    display: inline-block;
+ 
+}
+.account-info strong {
+    font-size: 1.2rem;
+}
+
+.account-info p {
+    margin: 5px 0 0 0;
+}
+
+/* Column styling */
+.account-info {
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    background-color: #f8f9fa;
+    padding: 15px;
+    width: 30%; /* Adjusts the width of each column */
+    box-sizing: border-box;
+    text-align: left;
+}
+.p {
+    font-size: 1.0rem;
+    margin-bottom: 10px;
+    text-align: left;
+    padding: 15px;
+    font-style: normal;
+    font-weight: bold;
+}
