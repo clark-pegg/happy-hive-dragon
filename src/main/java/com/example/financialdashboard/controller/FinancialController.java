@@ -11,7 +11,7 @@ public class FinancialController {
 
   // DUMMY METHOD
   // Currently reads from "balances.json", would need to be changed
-  // to read from an actual database
+  // to read from an actual database in later iterations
 
   @GetMapping("/balances")
   public String getBalances() {
