@@ -1,21 +1,40 @@
 {
+  "user": "example",
   "accounts": [
     {
+      "accountId": "003",
+      "accountName": "Investment",
+      "balance": "5,341.34",
+      "currency": "CAD"
+    },
+    {
+      "accountId": "004",
+      "accountName": "Credit Card",
+      "balance": "1,242.39",
+      "currency": "CAD"
+    },
+    {
       "accountId": "001",
-      "accountName": "Savings Account",
-      "balance": 5000,
+      "accountName": "Savings",
+      "balance": "3,506.03",
       "currency": "CAD"
     },
     {
       "accountId": "002",
-      "accountName": "Checking Account",
-      "balance": 1200,
+      "accountName": "Checking",
+      "balance": "1,009.62",
       "currency": "CAD"
     },
     {
-      "accountId": "003",
-      "accountName": "Investment Account",
-      "balance": 20000,
+      "accountId": "005",
+      "accountName": "Loan",
+      "balance": "548.55",
+      "currency": "CAD"
+    },
+    {
+      "accountId": "006",
+      "accountName": "Insurance",
+      "balance": "6,589.66",
       "currency": "CAD"
     }
   ]
