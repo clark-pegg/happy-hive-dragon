@@ -1,5 +1,8 @@
 package com.example.financialdashboard.controller;
 
+import java.io.IOException;
+
+import org.apache.commons.io.IOUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -12,6 +15,12 @@ public class FinancialController {
 
   @GetMapping("/balances")
   public String getBalances() {
-    return FinancialControllerHelper.getBalanceFromFile();
+    try{
+      return IOUtils.toString(getClass().getClassLoader().getResourceAsStream("balances.json"));
+    } catch (IOException e) {
+      System.out.println("Could need read file containing balances");
+      e.printStackTrace(System.out);
+      return "{}";
+    }
   }
 }
