@@ -1,24 +1,13 @@
 body {
     background-color: #f4f6f9;
     font-family: Arial, sans-serif;
-    color: #333;
     font-size: 1.0rem;
 }
 
 .container {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-header {
-    text-align: left;
-    margin-bottom: 20px;
-}
-
-header h1 {
-    font-size: 2.0rem;
-    font-weight: bold;
-    color: rgb(0, 0, 0);
+    max-width: 70%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Card styling */
@@ -27,73 +16,53 @@ header h1 {
     border-radius: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     background-color: #ffffff;
-    text-align: center; /* Center text within the card */
 }
 
 .card-header {
     background-color: #f2f2fc;
-    color: rgb(0, 0, 0);
-    padding: 10px;
+    padding: 1%;
+    padding-left: 3%;
     font-size: 1.0rem;
-    border-bottom: none;
-    border-radius: 5px 5px 0 0;
-    font-weight: bold; /* Bold header */
-    text-align: left;
+    font-weight: bold;
 }
 
 .card-body {
-    padding: 20px;
+    padding-top: 1%;
+    padding-bottom: 20px
 }
 
-.account-header {
-    text-align: center;
-    font-size: 1.rem;
-    margin-bottom: 20px;
-    color: #000000ef;
+.balance-header {
+    padding-left: 3%;
+    padding-bottom: 10px;
+    color: #70a6bf;
+    font-weight: bold;
 }
 
 .balances-row {
     display: flex;
+    padding-left: 3%;
+    padding-right: 3%;
     justify-content: space-between;
     gap: 20px;
     flex-wrap: wrap
 }
 
+/* Column styling */
 .account-info {
-    border: 1px solid #dee2e6;
-    border-radius: 5px;
-    background-color: #f8f9fa;
-    padding: 15px;
-    width: 100%;
-    text-align: left;
+    background-color: #f2f2f2;
+    padding: 20px 0px 0px 0px;
+    width: 30%;
     box-sizing: border-box;
-    margin-bottom: 20px;
-    display: inline-block;
- 
+    text-align: center;
 }
+
 .account-info strong {
-    font-size: 1.2rem;
+    font-size: 5rem;
+    color: rgba(0, 0, 0, 0.8)
 }
 
 .account-info p {
-    margin: 5px 0 0 0;
-}
-
-/* Column styling */
-.account-info {
-    border: 1px solid #dee2e6;
-    border-radius: 5px;
-    background-color: #f8f9fa;
-    padding: 15px;
-    width: 30%; /* Adjusts the width of each column */
-    box-sizing: border-box;
-    text-align: left;
-}
-.p {
-    font-size: 1.0rem;
-    margin-bottom: 10px;
-    text-align: left;
-    padding: 15px;
-    font-style: normal;
+    font-size: 1rem;
     font-weight: bold;
+    color: rgba(0, 0, 0, 0.5)
 }

@@ -9,18 +9,18 @@
 </head>
 
 <body>
-  <div class="container mt-4">
-    <div class="card text-left">
-      <div class="card-header">
+  <div class="container">
+    <div class="card">
+      <div id="greeting" class="card-header">
         <h1>DASHBOARD</h1>
-        <div class="p">Welcome Back, UserName</div>
+        Welcome back,
       </div>
-      <div class="p">ACCOUNT BALANCES</div>
 
       <div class="card-body">
-        <strong>
-          <div id="balance"></div>
-        </strong>
+        <div class="balance-header">
+          ACCOUNT BALANCES
+        </div>
+        <div id="balance"></div>
       </div>
     </div>
   </div>
@@ -30,10 +30,11 @@
     fetch("/balances")
       .then(response => response.json())
       .then(data => {
-        console.log(data)
+        const greeting = document.getElementById("greeting");
+        greeting.innerHTML = greeting.innerHTML + data.user + "!";
 
-        const element = document.getElementById("balance");
-        element.innerHTML = ''; // Clear previous content
+        const balances = document.getElementById("balance");
+        balances.innerHTML = ''; // Clear previous content
 
         // Create a container for the row
         const rowDiv = document.createElement("div");
@@ -47,8 +48,8 @@
 
           // Add account details to the column
           colDiv.innerHTML = `
-                        <strong>$ ${account.balance} ${account.currency}</strong>
-                        <div class="p">${account.accountName}</p>
+                        <strong>$${account.balance}</strong>
+                        <p>${account.accountName.toUpperCase()}</p>
                     `;
 
           // Append the column to the row container
@@ -56,7 +57,7 @@
         });
 
         // Append the row container to the balance element
-        element.appendChild(rowDiv);
+        balances.appendChild(rowDiv);
       });
   </script>
 </body>
