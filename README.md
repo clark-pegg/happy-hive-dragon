@@ -7,7 +7,7 @@ https://happy-hive-dragon-production.up.railway.app/
 https://github.com/clark-pegg/happy-hive-dragon
 
 ## User Stories
-https://docs.google.com/document/d/1bXDu2Bu85T58Y0QILOsbtC4Qmy65kazaKWOR8FrF2IY/edit?pli=1&tab=t.0 (may need to request access)
+https://docs.google.com/document/d/1bXDu2Bu85T58Y0QILOsbtC4Qmy65kazaKWOR8FrF2IY/edit?usp=sharing
 
 ## Running the Program
 To run the program you can either use the provided script:
